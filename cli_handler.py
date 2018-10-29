@@ -1,11 +1,12 @@
 ###########################################################
 # A file that functionality that reacts to the cli commands
-# Author: Piotr Wieżel
+# Author: Piotr Wiezel
 ###########################################################
 
 
 from mod import Mod
 import random
+
 
 class Handler:
     # Input choice = 1

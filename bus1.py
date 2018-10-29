@@ -1,9 +1,9 @@
 ###########################################################
 # A main file of the project
-# Author: Piotr Wieżel
+# Author: Piotr Wiezel
 ###########################################################
 
-import sys
+
 from cli import CLI
 
 
