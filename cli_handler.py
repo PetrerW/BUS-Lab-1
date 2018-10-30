@@ -5,6 +5,7 @@
 
 
 from mod import Mod
+from egcd import egcd
 import random
 
 
@@ -53,4 +54,20 @@ class Handler:
             return random.randrange(2**(bits-1), 2**bits)
         else:
             return None
+
+    # https://gist.github.com/ofaurax/6103869014c246f962ab30a513fb5b49
+    # Took from SO
+    def egcd(a, b):
+        if a == 0:
+            return (b, 0, 1)
+        g, y, x = egcd(b % a, a)
+        return (g, x - (b // a) * y, y)
+
+    @staticmethod
+    def modinv(a, m):
+        g, x, y = egcd(a, m)
+        if g != 1:
+            return 'No modular inverse'
+
+        return x % m
 
